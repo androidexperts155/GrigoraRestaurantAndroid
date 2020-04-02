@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "435823834296",
+    "firebase_url": "https://grigora-restaurants.firebaseio.com",
+    "project_id": "grigora-restaurants",
+    "storage_bucket": "grigora-restaurants.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435823834296:android:f521493d2d074fccc6304d",
+        "android_client_info": {
+          "package_name": "com.rvtechnologies.grigora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435823834296-kq4o35d29cvurspjoit9pb1fslp212gl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsvWV0AWi4scTJU8czKC_b6-9MXUK4hRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435823834296-kq4o35d29cvurspjoit9pb1fslp212gl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "435823834296-g4l6a68fgfp9be2t81cl6tmih4slabtf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.RV.Grigora.Resturant"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435823834296:android:50edafd17fb149c8",
+        "android_client_info": {
+          "package_name": "com.rvtechnologies.grigorahq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435823834296-s0khu3tcvd4h527c7vo7q5bdpidicmit.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rvtechnologies.grigorahq",
+            "certificate_hash": "fcbedf374ef035546493facc0230bff7b31e5446"
+          }
+        },
+        {
+          "client_id": "435823834296-kq4o35d29cvurspjoit9pb1fslp212gl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsvWV0AWi4scTJU8czKC_b6-9MXUK4hRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435823834296-kq4o35d29cvurspjoit9pb1fslp212gl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "435823834296-g4l6a68fgfp9be2t81cl6tmih4slabtf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.RV.Grigora.Resturant"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

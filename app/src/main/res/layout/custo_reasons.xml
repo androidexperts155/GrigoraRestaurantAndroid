@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_reasons"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/tv_reasons"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:button="@drawable/green_check_box_layout"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_12sdp"
+        android:text="@string/other"
+        android:textSize="@dimen/_12sdp" />
+
+    <ImageView
+        android:id="@+id/iv_tick"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_toEndOf="@+id/tv_reasons"
+        android:src="@drawable/green_tick"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_reasons"
+        android:background="@color/light_grey" />
+
+
+</RelativeLayout>

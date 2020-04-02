@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rvtechnologies.grigorahq">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".reasons.RejectReasonsActivity"/>
+        <activity android:name=".ui.login_signup.login_phone.LoginPhoneActivity" />
+        <activity android:name=".timings.TimingsActivity" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".about_us.AboutUsActivity" />
+        <activity android:name=".contact_us.ContactUsActivity" />
+        <activity android:name=".settings.ResetPasswordActivity" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".offers.OffersFragment" />
+        <activity android:name=".complete_profile.SearchAddressActivity" />
+        <activity android:name=".complete_profile.CompleteProfileAtivity"/>
+        <activity android:name=".wallet.WalletActivity" />
+        <activity android:name=".complete_profile.SelectCusinesActivity" />
+        <activity android:name=".forgot_password.ForgotPasswordActivity" />
+        <activity android:name=".language_selection.LanuageSelectionActivity" />
+        <activity android:name=".ui.login_signup.login_phone.OtpActivity" />
+        <activity android:name=".navigation.NavigationActivity"
+                  android:hardwareAccelerated="true" />
+        <activity android:name=".menu.MenuActivity" />
+        <activity android:name=".categories.Categories" />
+        <activity android:name=".categories.AddCategory" />
+        <activity
+            android:name=".ui.login_signup.fragments.LogInFragment"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.login_signup.fragments.SignupFragment"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".menu.AddNewItem" />
+        <activity android:name=".orders.details.OnGoingOrderDetails" />
+        <activity android:name=".orders.details.NewOrderDetails" />
+        <activity android:name=".ui.login_signup.login_phone.PhoneLogin" />
+        <activity
+            android:name=".ui.login_signup.Splash"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="AIzaSyBUxnaQYt2gfojKC3lcYgtG88ERduqyjIU" /> -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_img" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="10001" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDo51Rxb7QMQ_bKj3hBmZ6Ty8p7BYp7oWU" />
+
+        <service
+            android:name=".utils.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

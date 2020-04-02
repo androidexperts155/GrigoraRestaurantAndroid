@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/ed_item_cat"
+            style="@style/medium_text"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@null"
+            android:hint="@string/enter_sub_category"
+            android:inputType="textCapSentences"
+            android:paddingStart="@dimen/_5sdp"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_primary"
+            android:textSize="@dimen/_11sdp" />
+
+        <ImageView
+            android:id="@+id/iv_select_remove_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_clear_black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ed_item_cat"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:background="@color/grey" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/medium_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:text="@string/selection_type"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_11sdp" />
+
+        <RadioGroup
+            android:id="@+id/rg_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_single"
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/single"
+                android:textColor="@color/text_primary" />
+
+            <RadioButton
+                android:id="@+id/rb_multilple"
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/multiple"
+                android:textColor="@color/text_primary" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_child_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/iv_select_child"
+        style="@style/semibold_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:drawableStart="@drawable/ic_add_button"
+        android:drawablePadding="@dimen/_5sdp"
+        android:textStyle="bold"
+        android:text="@string/add_on_type_and_price"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/_11sdp" />
+
+</LinearLayout>

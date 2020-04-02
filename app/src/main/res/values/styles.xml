@@ -1,0 +1,46 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+
+
+    </style>
+
+    <style name="medium_text">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:color">@color/text_primary</item>
+    </style>
+
+    <style name="regular_text">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:color">@color/text_primary</item>
+    </style>
+
+    <style name="semibold_text">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="colorControlActivated">@color/duskYellow</item>
+
+    </style>
+
+
+</resources>

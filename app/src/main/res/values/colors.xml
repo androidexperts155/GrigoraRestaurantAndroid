@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#F01A1C</color>
+    <color name="colorPrimaryDark">#F01A1C</color>
+    <color name="colorAccent">#F01A1C</color>
+
+    <color name="text_primary">#3B4254</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="transculent_black">#50000000</color>
+    <color name="dark_gray">#262626</color>
+    <color name="textBlack">#262626</color>
+
+    <color name="list_bg">#EAEAEC</color>
+    <color name="dish_bg_color">#F5F5F8</color>
+    <color name="item_white">#E2DBDB</color>
+    <color name="orders_bg">#FDEDEC</color>
+    <color name="transparent">#C5BFBF</color>
+    <color name="sky_blue">#24A0ED</color>
+    <color name="grey">#A9A9A9</color>
+    <color name="light_grey">#F1E9E9</color>
+    <color name="duskYellow">#FF9529</color>
+    <color name="lightGrey">#bababa</color>
+    <color name="viewbg">#DFDEDE</color>
+    <color name="wating">#E95670</color>
+    <color name="ongoing">#FBC00E</color>
+    <color name="new_">#8155BA</color>
+    <color name="completed">#18A558</color>
+    <color name="rejected_rest">#DF362D</color>
+    <color name="cancel_cust">#FF8691</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#3B4254</color>
+</resources>

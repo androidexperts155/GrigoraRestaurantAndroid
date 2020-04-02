@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:context=".book_table.BookTableFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".book_table.BookTableFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/tv_avail"
+            style="@style/semibold_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:gravity="center_vertical"
+            android:text="@string/table_booking_availiability"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/_11sdp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/avail_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_15sdp" />
+
+        <RelativeLayout
+            android:id="@+id/ll_add_guest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_avail"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_no_guest"
+                style="@style/semibold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/number_of_guest_capacity"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_11sdp" />
+
+            <EditText
+                android:id="@+id/ed_no_guest"
+                style="@style/medium_text"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_no_guest"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@null"
+                android:inputType="number"
+                android:text="0" />
+
+
+            <TextView
+                android:id="@+id/btn_submit"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/tv_no_guest"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                style="@style/semibold_text"
+                android:background="@drawable/white_bg"
+                android:textColor="@color/text_primary"
+                android:elevation="@dimen/_12sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/save" />
+
+            <View
+                android:layout_below="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_add_guest"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp" />
+
+    </RelativeLayout>
+</ScrollView>
