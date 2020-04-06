@@ -32,6 +32,7 @@ import com.rvtechnologies.grigorahq.network.ConnectionNetwork
 import com.rvtechnologies.grigorahq.network.EventBroadcaster
 import com.rvtechnologies.grigorahq.network.NetworkConstants
 import com.rvtechnologies.grigorahq.network.NetworkConstants.Companion.change_item_availabilty_status
+import com.rvtechnologies.grigorahq.network.NetworkConstants.Companion.mark_unmark_featured
 import com.rvtechnologies.grigorahq.services.models.DeleteCategoryModel
 import com.rvtechnologies.grigorahq.services.models.DishModel
 import com.rvtechnologies.grigorahq.services.models.EditCategoryModel
@@ -39,6 +40,7 @@ import com.rvtechnologies.grigorahq.services.models.ItemAvailabilityModel
 import com.rvtechnologies.grigorahq.utils.BroadcastConstants.Companion.change_item_availabilty_status_num
 import com.rvtechnologies.grigorahq.utils.BroadcastConstants.Companion.delete_category_num
 import com.rvtechnologies.grigorahq.utils.BroadcastConstants.Companion.edit_category_num
+import com.rvtechnologies.grigorahq.utils.BroadcastConstants.Companion.mark_unmark_featured_num
 import com.rvtechnologies.grigorahq.utils.BroadcastConstants.Companion.restaurant_items_list_num
 import com.rvtechnologies.grigorahq.utils.CommonUtils
 import com.rvtechnologies.grigorahq.utils.IOnRecyclerItemClick
@@ -49,7 +51,7 @@ import java.io.File
 import java.util.regex.Pattern
 
 class Categories : Fragment(), EventBroadcaster, IOnRecyclerItemClick {
-    override fun onLongClick(item: Any, itemView: View) {
+    override fun onLongClick(item: Any) {
 
     }
 
@@ -57,6 +59,31 @@ class Categories : Fragment(), EventBroadcaster, IOnRecyclerItemClick {
         if (item is DishModel.Data) {
             setItemAvail(item.id, status)
         }
+    }
+
+    override fun onFeatured(item: Any, status: Int) {
+        if(item is DishModel.Data){
+            setFeaturedDish(item.id,status)
+        }
+    }
+
+    private fun setFeaturedDish(id: Int, status: Int) {
+        var headerMAp = HashMap<String, Any?>()
+        var dataMap = HashMap<String, Any?>()
+        headerMAp.put("Authorization", CommonUtils.getPrefValue(activity, PrefConstants.TOKEN))
+        headerMAp.put("Accept", "application/json")
+        dataMap.put("item_id", id)
+        dataMap.put("status", status)
+
+        ConnectionNetwork.postFormData(
+            mark_unmark_featured,
+            headerMAp,
+            dataMap,
+            "",
+            activity!!,
+            parent_layout_cat,
+            mark_unmark_featured_num
+        )
     }
 
 
@@ -146,6 +173,14 @@ class Categories : Fragment(), EventBroadcaster, IOnRecyclerItemClick {
                 setApi(
                     NetworkConstants.restaurant_items_list, restaurant_items_list_num
                 )
+            }
+        }
+            else if (code == mark_unmark_featured_num) {
+            var pojo = Gson().fromJson(data.toString(), ItemAvailabilityModel::class.java)
+            if (pojo.status) {
+//                setApi(
+//                    NetworkConstants.restaurant_items_list, restaurant_items_list_num
+//                )
             }
 
         }

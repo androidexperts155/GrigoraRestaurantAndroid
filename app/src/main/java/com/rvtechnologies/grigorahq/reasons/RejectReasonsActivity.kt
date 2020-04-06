@@ -149,10 +149,14 @@ class RejectReasonsActivity : AppCompatActivity(), EventBroadcaster, IOnRecycler
         )
     }
 
-    override fun onLongClick(item: Any, itemView: View) {
+    override fun onLongClick(item: Any) {
     }
 
     override fun onSwitchAvail(item: Any, status: Int) {
 
+    }
+
+    override fun onFeatured(item: Any, status: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

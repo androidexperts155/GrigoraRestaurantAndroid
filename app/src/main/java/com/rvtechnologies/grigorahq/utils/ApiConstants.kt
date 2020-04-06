@@ -3,7 +3,8 @@ package com.rvtechnologies.grigorahq.utils
 import retrofit2.http.GET
 
 object ApiConstants {
-    const val BASE_URL = "http://3.13.78.53/GriGora/public/api/"
+//    const val BASE_URL = "http://3.13.78.53/GriGora/public/api/"
+    const val BASE_URL = "http://3.13.78.53/api/"
     const val PLACE_API_KEY = "AIzaSyBUxnaQYt2gfojKC3lcYgtG88ERduqyjIU"
     var SOCKET_URL = "http://3.13.78.53:3000/"
 

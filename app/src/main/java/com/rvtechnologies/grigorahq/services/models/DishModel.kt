@@ -48,6 +48,8 @@ data class DishModel(
         val restaurantId: Int,
         @SerializedName("status")
         val status: String,
+        @SerializedName("featured")
+        val featured: String,
         @SerializedName("updated_at")
         val updatedAt: String
     ) : Serializable {

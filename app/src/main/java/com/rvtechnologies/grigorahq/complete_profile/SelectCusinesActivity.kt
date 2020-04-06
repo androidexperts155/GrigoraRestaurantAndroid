@@ -34,12 +34,16 @@ class SelectCusinesActivity : AppCompatActivity(), EventBroadcaster, IOnRecycler
     lateinit var cusines_comma_seprate: String
     var list: ArrayList<CusinesModel.Data> = ArrayList()
 
-    override fun onLongClick(item: Any, itemView: View) {
+    override fun onLongClick(item: Any) {
 
     }
 
     override fun onSwitchAvail(item: Any, status: Int) {
 
+
+    }
+
+    override fun onFeatured(item: Any, status: Int) {
 
     }
 

@@ -25,9 +25,9 @@ class AboutUsActivity : AppCompatActivity() {
             finish()
         }
         if (CommonUtils.getPrefLang(this, PrefConstants.LANGUAGE).equals("en")) {
-            wv_abt.loadUrl("http://3.13.78.53/about_us/en/")
+            wv_abt.loadUrl("www.grigora.com/about_us/en/")
         } else
-            wv_abt.loadUrl("http://3.13.78.53/about_us/fr/")
+            wv_abt.loadUrl("www.grigora.com/about_us/fr/")
 
     }
 }

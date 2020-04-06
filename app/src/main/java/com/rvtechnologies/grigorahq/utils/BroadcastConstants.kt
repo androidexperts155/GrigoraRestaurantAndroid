@@ -65,6 +65,9 @@ class BroadcastConstants {
         const val remove_promo_to_restaurant_num = 55
         const val change_restaurant_booking_status_num = 56
         const val change_language_num = 57
+        const val add_parent_cuisine_num = 58
+        const val get_parent_cuisine_num = 59
+        const val mark_unmark_featured_num = 60
         const val OTP_CODE = 103
     }
 }

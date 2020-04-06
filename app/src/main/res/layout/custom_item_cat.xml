@@ -69,7 +69,8 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_7sdp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <RadioButton
                 android:id="@+id/rb_single"
@@ -88,6 +89,37 @@
                 android:text="@string/multiple"
                 android:textColor="@color/text_primary" />
         </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ed_sub_min"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/edit_text_bg"
+                android:hint="Minimum"
+                android:paddingStart="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/ed_sub_max"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/edit_text_bg"
+                android:hint="Maximum"
+                android:paddingStart="@dimen/_10sdp" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
 
@@ -108,9 +140,9 @@
         android:layout_marginBottom="@dimen/_10sdp"
         android:drawableStart="@drawable/ic_add_button"
         android:drawablePadding="@dimen/_5sdp"
-        android:textStyle="bold"
-        android:text="@string/add_on_type_and_price"
+        android:text="@string/ad_ons"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/_11sdp" />
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold" />
 
 </LinearLayout>

@@ -2,7 +2,8 @@ package com.rvtechnologies.grigorahq.network
 
 class NetworkConstants {
     companion object {
-        const val BASE_URL = "http://3.13.78.53/GriGora/public/api/"
+//        const val BASE_URL = "http://3.13.78.53/GriGora/public/api/"
+        const val BASE_URL = "http://3.13.78.53/api/"
         const val signup = "signup"
         const val login = "login"
         const val add_category = "add-category"
@@ -57,5 +58,8 @@ class NetworkConstants {
         const val change_language = "change-language/"
         const val remove_promo_to_restaurant = "assign-promo-to-restaurant"
         const val change_restaurant_booking_status = "change-restaurant-booking-status"
+        const val add_parent_cuisine = "add-parent-cuisine"
+        const val get_parent_cuisine = "get-parent-cuisine"
+        const val mark_unmark_featured = "mark-unmark-featured"
     }
 }

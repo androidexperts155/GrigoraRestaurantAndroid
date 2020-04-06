@@ -1,13 +1,16 @@
 package com.rvtechnologies.grigorahq.categories.adapter
 
+import android.content.res.ColorStateList
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.ContextCompat
+import androidx.core.widget.CompoundButtonCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -32,11 +35,12 @@ class CategoriesAdapter(
         holder.tv_price.setText(holder.itemView.context.getString(R.string.price) + pojo.price)
         if (pojo.status.equals("0")) {
 
+
             if (pojo.pureVeg.equals("1")) {
                 holder.tv_food_type.setText(holder.itemView.context.getString(R.string.veg))
-            }else if(pojo.pureVeg.equals("0")){
+            } else if (pojo.pureVeg.equals("0")) {
                 holder.tv_food_type.setText(holder.itemView.context.getString(R.string.non_veg))
-            }else{
+            } else {
                 holder.tv_food_type.setText(holder.itemView.context.getString(R.string.contain_egg))
             }
             holder.iv_avial.isChecked = false
@@ -49,6 +53,12 @@ class CategoriesAdapter(
                 null
             )
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                holder.iv_feature.setTextColor(
+                    holder.itemView.context.resources.getColor(
+                        R.color.transculent_black,
+                        holder.itemView.context.theme
+                    )
+                )
                 holder.tv_price.setTextColor(
                     holder.itemView.context.resources.getColor(
                         R.color.transculent_black,
@@ -67,10 +77,24 @@ class CategoriesAdapter(
                         holder.itemView.context.theme
                     )
                 )
+                CompoundButtonCompat.setButtonTintList(
+                    holder.iv_feature, ColorStateList
+                        .valueOf(
+                            holder.itemView.context.resources.getColor(
+                                R.color.transculent_black,
+                                holder.itemView.context.theme
+                            )
+                        )
+                );
+
+
+
             } else {
+                holder.iv_feature.setTextColor(holder.itemView.context.resources.getColor(R.color.transculent_black))
                 holder.tv_price.setTextColor(holder.itemView.context.resources.getColor(R.color.transculent_black))
                 holder.tv_food_type.setTextColor(holder.itemView.context.resources.getColor(R.color.transculent_black))
                 holder.tv_dish.setTextColor(holder.itemView.context.resources.getColor(R.color.transculent_black))
+
 
             }
 
@@ -83,7 +107,7 @@ class CategoriesAdapter(
                     null,
                     null
                 )
-            } else if(pojo.pureVeg.equals("0")) {
+            } else if (pojo.pureVeg.equals("0")) {
                 holder.tv_food_type.setText(holder.itemView.context.getString(R.string.non_veg))
                 holder.tv_food_type.setCompoundDrawablesWithIntrinsicBounds(
                     ContextCompat.getDrawable(holder.itemView.context, R.drawable.non_veg),
@@ -91,7 +115,7 @@ class CategoriesAdapter(
                     null,
                     null
                 )
-            }else{
+            } else {
                 holder.tv_food_type.setText(holder.itemView.context.getString(R.string.contain_egg))
                 holder.tv_food_type.setCompoundDrawablesWithIntrinsicBounds(
                     ContextCompat.getDrawable(holder.itemView.context, R.drawable.egg_radio),
@@ -118,6 +142,16 @@ class CategoriesAdapter(
             }
         }
 
+        holder.iv_feature.setOnCheckedChangeListener { compoundButton, b ->
+            if (b)
+                listner.onFeatured(pojo, 1)
+            else {
+                listner.onFeatured(pojo, 0)
+            }
+        }
+
+        holder.iv_feature.isChecked = pojo.featured.equals("1")
+
     }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
@@ -140,6 +174,7 @@ class CategoriesAdapter(
         var tv_food_type = itemView.findViewById<TextView>(R.id.tv_food_type)
         var tv_price = itemView.findViewById<TextView>(R.id.tv_price)
         var iv_avial = itemView.findViewById<SwitchCompat>(R.id.iv_avial)
+        var iv_feature = itemView.findViewById<CheckBox>(R.id.iv_feature)
     }
 
     fun filterList(filterdNames: ArrayList<DishModel.Data>) {
